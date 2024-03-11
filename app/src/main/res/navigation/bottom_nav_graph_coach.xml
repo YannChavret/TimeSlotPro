@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph_coach"
+    app:startDestination="@id/mainCoachFragment">
+
+    <fragment
+        android:id="@+id/mainCoachFragment"
+        android:name="com.yanncha.timeslotpro.ui.coach.main.MainCoachFragment"
+        android:label="fragment_main_coach"
+        tools:layout="@layout/fragment_main_coach" >
+        <action
+            android:id="@+id/action_mainCoachFragment_to_detailsCourseFragment"
+            app:destination="@id/detailsCourseFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/createCourseFragment"
+        android:name="com.yanncha.timeslotpro.ui.coach.create.CreateCourseFragment"
+        android:label="fragment_create_course"
+        tools:layout="@layout/fragment_create_course" />
+    <fragment
+        android:id="@+id/detailsCourseFragment"
+        android:name="com.yanncha.timeslotpro.ui.coach.detail.DetailsCourseFragment"
+        android:label="fragment_details_course"
+        tools:layout="@layout/fragment_details_course" >
+        <argument
+            android:name="courseId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentsFragment"
+        android:name="com.yanncha.timeslotpro.ui.coach.students.StudentsFragment"
+        android:label="fragment_students"
+        tools:layout="@layout/fragment_students" >
+        <action
+            android:id="@+id/action_studentsFragment_to_userEditDialogFragment"
+            app:destination="@id/userEditDialogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <dialog
+        android:id="@+id/userEditDialogFragment"
+        android:name="com.yanncha.timeslotpro.ui.coach.students.UserEditDialogFragment"
+        android:label="fragment_user_edit_dialog"
+        tools:layout="@layout/fragment_user_edit_dialog" >
+        <argument
+            android:name="userId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+        <argument
+            android:name="userFirstname"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="userLastname"
+            app:argType="string"
+            android:defaultValue='""' />
+    </dialog>
+</navigation>

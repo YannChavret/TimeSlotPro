@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="course"
+            type="com.yanncha.timeslotpro.network.models.CourseWithCoachDetails" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout13"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.user.book_details.BookDetailsCourseFragment">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar_coach"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_book_details_intitule"
+            app:layout_constraintTop_toBottomOf="@+id/tv_book_details_intitule"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_prenom_coach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="@{course.prenomCoach}"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_avatar_coach"
+            app:layout_constraintStart_toEndOf="@+id/iv_avatar_coach"
+            app:layout_constraintTop_toTopOf="@+id/iv_avatar_coach" />
+
+        <TextView
+            android:id="@+id/tv_nom_coach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="@{course.nomCoach}"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_prenom_coach"
+            app:layout_constraintStart_toEndOf="@+id/tv_prenom_coach"
+            app:layout_constraintTop_toTopOf="@+id/tv_prenom_coach" />
+
+        <Button
+            android:id="@+id/btn_reserver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edit_text_background_white_pink"
+            android:fontFamily="@font/poppins_extrabold"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="10dp"
+            android:text="Réserver"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_book_details_course_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_extrabold"
+            android:text="Détail du cours"
+            android:textColor="@color/primaryMediumBlue"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_book_details_intitule"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/poppins_extrabold"
+            android:text="@{course.intitule}"
+            android:textColor="@color/pink"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_book_details_course_title" />
+
+        <TextView
+            android:id="@+id/tv_book_details_niveau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/textview_background_pink"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="@{course.niveau}"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_book_details_intitule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_book_details_intitule" />
+
+        <TextView
+            android:id="@+id/tv_book_details_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_extrabold"
+            android:text="@{course.date}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_avatar_coach" />
+
+        <TextView
+            android:id="@+id/tv_book_details_heure_debut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@{course.heure_debut}"
+            app:layout_constraintEnd_toStartOf="@+id/tv_book_details_heure_fin"
+            app:layout_constraintStart_toStartOf="@+id/tv_book_details_date"
+            app:layout_constraintTop_toBottomOf="@+id/tv_book_details_date" />
+
+        <TextView
+            android:id="@+id/tv_book_details_heure_fin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@{course.heure_fin}"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_book_details_heure_debut"
+            app:layout_constraintEnd_toEndOf="@+id/tv_book_details_date"
+            app:layout_constraintStart_toEndOf="@+id/tv_book_details_heure_debut"
+            app:layout_constraintTop_toTopOf="@+id/tv_book_details_heure_debut" />
+
+        <TextView
+            android:id="@+id/tv_book_details_participants_inscrits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Participants inscrits : "
+            app:layout_constraintStart_toStartOf="@+id/iv_avatar_coach"
+            app:layout_constraintTop_toBottomOf="@+id/tv_book_details_heure_debut" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_book_details_userList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_reserver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_book_details_participants_inscrits" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

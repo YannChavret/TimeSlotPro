@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout14"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.user.profile.ProfileFragment" >
+
+    <Button
+        android:id="@+id/btn_buy_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edit_text_background_white_pink"
+        android:fontFamily="@font/poppins_extrabold"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="10dp"
+        android:text="Acheter des crédits"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_profile_credits_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/textview_background_pink"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Crédits"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_profile_credits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_profile_credits" />
+
+    <TextView
+        android:id="@+id/tv_profile_level_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textview_background_pink"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="Niveau"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_profile_level"
+        app:layout_constraintEnd_toEndOf="@+id/tv_profile_credits_count"
+        app:layout_constraintTop_toTopOf="@+id/tv_profile_level" />
+
+    <TextView
+        android:id="@+id/tv_profile_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_profile_avatar"
+        app:layout_constraintStart_toStartOf="@+id/iv_profile_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile_avatar" />
+
+    <TextView
+        android:id="@+id/tv_profile_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Mes crédits restants"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_profile_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Mon niveau"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_profile_credits"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile_credits" />
+
+    <TextView
+        android:id="@+id/tv_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="Mon profil"
+        android:textColor="@color/primaryMediumBlue"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profile_avatar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_profile"
+        app:layout_constraintStart_toStartOf="@+id/tv_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile"
+        tools:srcCompat="@tools:sample/avatars"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

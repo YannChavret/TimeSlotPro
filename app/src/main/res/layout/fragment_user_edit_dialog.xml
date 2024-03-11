@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background_default"
+    tools:context=".ui.coach.students.UserEditDialogFragment">
+
+    <TextView
+        android:id="@+id/tv_edit_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Modifier le niveau"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_edit_username" />
+
+    <TextView
+        android:id="@+id/tv_edit_credit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Ajouter des crédits"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_edit"
+        app:layout_constraintStart_toStartOf="@+id/tv_edit_level"
+        app:layout_constraintTop_toBottomOf="@+id/tv_edit_level" />
+
+    <Spinner
+        android:id="@+id/et_edit_niveau"
+        style="@style/CustomSpinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_background_default"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Niveau"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_edit_level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="@+id/tv_edit_level" />
+
+    <EditText
+        android:id="@+id/et_edit_credits"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background_default"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="0"
+        android:inputType="number"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_edit_credit"
+        app:layout_constraintEnd_toEndOf="@+id/et_edit_niveau"
+        app:layout_constraintTop_toTopOf="@+id/tv_edit_credit" />
+
+    <Button
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background_white_blue"
+        android:fontFamily="@font/poppins_extrabold"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="10dp"
+        android:text="Valider"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_edit_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">TimeSlotPro</string>
+    <string name="invalid_password">Le mot de passe doit contenir au moins 8 caractères, dont une lettre et un chiffre</string>
+    <string name="login_password_mismatch">Les mots de passe ne correspondent pas</string>
+    <string name="identifiant_already_exists">Cet identifiant existe déjà, veuillez en choisir un autre.</string>
+    <string name="registration_successful">Compte créé avec succès</string>
+    <string name="fields_not_filled">Veuillez remplir tous les champs</string>
+    <string name="invalid_login">Identifiant ou mot de passe incorrect</string>
+    <string name="welcome_user">Connexion réussie. Bienvenue !</string>
+    <string name="course_added_successfully">Cours ajouté avec succès</string>
+    <string name="no_courses_available">Aucun cours à afficher</string>
+    <string name="logout_user">Deconnexion réussie</string>
+    <string name="course_booked">Cours réservé avec succès</string>
+    <string name="booking_error">Une erreur s\'est produite lors de la reservation</string>
+    <string name="level_mismatch">Vous n\'avez pas le niveau pour vous inscrire à ce cours</string>
+    <string name="no_reservation_available">Aucune réservation à afficher</string>
+    <string name="already_booked">Cours déjà réservé</string>
+    <string name="reservation_cancelled">Reservation annulée</string>
+    <string name="username_profile">%1$s %2$s</string>
+    <string name="insufficient_credits">nombre de crédits insuffisants</string>
+    <string name="user_not_found">utilisateur non trouvé</string>
+    <string name="reservation_not_found">Réservation non trouvée</string>
+    <string name="cannot_cancel_past_reservation">Impossible d\'annuler un cours passé</string>
+    <string name="invalid_level">Veuillez selectionner un niveau</string>
+    <string name="invalid_niveau">Veuillez selectionner un niveau</string>
+    <string name="coach_name">%1$s %2$s</string>
+    <string-array name="niveau_array">
+        <item>Niveau</item>
+        <item>Débutant</item>
+        <item>Confirmé</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">%1$s %2$s</string>
+</resources>

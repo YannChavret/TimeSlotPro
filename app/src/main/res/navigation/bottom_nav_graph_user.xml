@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph_coach"
+    app:startDestination="@id/mainUserFragment">
+    <fragment
+        android:id="@+id/mainUserFragment"
+        android:name="com.yanncha.timeslotpro.ui.user.main.MainUserFragment"
+        android:label="fragment_main_user"
+        tools:layout="@layout/fragment_main_user" >
+        <action
+            android:id="@+id/action_mainUserFragment_to_bookDetailsCourseFragment"
+            app:destination="@id/bookDetailsCourseFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookCourseFragment"
+        android:name="com.yanncha.timeslotpro.ui.user.book.BookCourseFragment"
+        android:label="fragment_book_course"
+        tools:layout="@layout/fragment_book_course" >
+        <action
+            android:id="@+id/action_bookCourseFragment_to_bookDetailsCourseFragment"
+            app:destination="@id/bookDetailsCourseFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailsCourseFragment"
+        android:name="com.yanncha.timeslotpro.ui.user.book_details.BookDetailsCourseFragment"
+        android:label="fragment_book_details_course"
+        tools:layout="@layout/fragment_book_details_course" >
+        <argument
+            android:name="courseId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.yanncha.timeslotpro.ui.user.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myApp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    myApp:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/registerCoachFragment"
+        android:name="com.yanncha.timeslotpro.ui.coach.register.RegisterCoachFragment"
+        android:label="fragment_register_coach"
+        tools:layout="@layout/fragment_register_coach" >
+        <action
+            android:id="@+id/action_registerCoachFragment_to_coachFragment"
+            myApp:destination="@id/coachFragment"
+            myApp:enterAnim="@anim/fade_in"
+            myApp:exitAnim="@anim/fade_out"
+            myApp:popUpTo="@id/splashFragment"
+            myApp:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginCoachFragment"
+        android:name="com.yanncha.timeslotpro.ui.coach.login.LoginCoachFragment"
+        android:label="fragment_login_coach"
+        tools:layout="@layout/fragment_login_coach" >
+        <action
+            android:id="@+id/action_loginCoachFragment_to_registerCoachFragment"
+            myApp:destination="@id/registerCoachFragment"
+            myApp:enterAnim="@anim/slide_in_right"
+            myApp:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_loginCoachFragment_to_coachFragment"
+            myApp:destination="@id/coachFragment"
+            myApp:enterAnim="@anim/fade_in"
+            myApp:exitAnim="@anim/fade_out"
+            myApp:popUpTo="@id/splashFragment"
+            myApp:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/coachFragment"
+        android:name="com.yanncha.timeslotpro.ui.coach.CoachFragment"
+        android:label="fragment_coach"
+        tools:layout="@layout/fragment_coach" >
+        <action
+            android:id="@+id/action_coachFragment_to_splashFragment"
+            myApp:destination="@id/splashFragment"
+            myApp:enterAnim="@anim/fade_in"
+            myApp:exitAnim="@anim/fade_out"
+            myApp:popEnterAnim="@anim/fade_in"
+            myApp:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.yanncha.timeslotpro.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_roleFragment2"
+            myApp:destination="@id/roleFragment2"
+            myApp:enterAnim="@anim/slide_in_right"
+            myApp:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_splashFragment_to_userFragment"
+            myApp:destination="@id/userFragment"
+            myApp:enterAnim="@anim/fade_in"
+            myApp:exitAnim="@anim/fade_out"
+            myApp:popEnterAnim="@anim/fade_in"
+            myApp:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_splashFragment_to_coachFragment"
+            myApp:destination="@id/coachFragment"
+            myApp:enterAnim="@anim/fade_in"
+            myApp:exitAnim="@anim/fade_out"
+            myApp:popEnterAnim="@anim/fade_in"
+            myApp:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginUserFragment"
+        android:name="com.yanncha.timeslotpro.ui.user.login.LoginUserFragment"
+        android:label="fragment_login_user"
+        tools:layout="@layout/fragment_login_user" >
+        <action
+            android:id="@+id/action_loginUserFragment_to_registerUserFragment"
+            myApp:destination="@id/registerUserFragment"
+            myApp:enterAnim="@anim/slide_in_right"
+            myApp:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_loginUserFragment_to_userFragment"
+            myApp:destination="@id/userFragment"
+            myApp:enterAnim="@anim/fade_in"
+            myApp:exitAnim="@anim/fade_out"
+            myApp:popUpTo="@id/splashFragment"
+            myApp:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/roleFragment2"
+        android:name="com.yanncha.timeslotpro.ui.role.RoleFragment"
+        android:label="fragment_role"
+        tools:layout="@layout/fragment_role" >
+        <action
+            android:id="@+id/action_roleFragment2_to_loginCoachFragment"
+            myApp:destination="@id/loginCoachFragment"
+            myApp:enterAnim="@anim/slide_in_right"
+            myApp:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_roleFragment2_to_loginUserFragment"
+            myApp:destination="@id/loginUserFragment"
+            myApp:enterAnim="@anim/slide_in_right"
+            myApp:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerUserFragment"
+        android:name="com.yanncha.timeslotpro.ui.user.register.RegisterUserFragment"
+        android:label="fragment_register_user"
+        tools:layout="@layout/fragment_register_user" >
+        <action
+            android:id="@+id/action_registerUserFragment_to_userFragment"
+            myApp:destination="@id/userFragment"
+            myApp:enterAnim="@anim/fade_in"
+            myApp:exitAnim="@anim/fade_out"
+            myApp:popUpTo="@id/splashFragment"
+            myApp:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.yanncha.timeslotpro.ui.user.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userFragment_to_splashFragment"
+            myApp:destination="@id/splashFragment"
+            myApp:enterAnim="@anim/fade_in"
+            myApp:exitAnim="@anim/fade_out"
+            myApp:popEnterAnim="@anim/fade_in"
+            myApp:popExitAnim="@anim/fade_out" />
+    </fragment>
+</navigation>

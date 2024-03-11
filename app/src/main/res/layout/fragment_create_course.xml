@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.coach.create.CreateCourseFragment">
+
+    <EditText
+        android:id="@+id/et_theme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_text_background_default"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Thème"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_niveau"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_course" />
+
+    <Spinner
+        android:id="@+id/et_niveau"
+        style="@style/CustomSpinnerStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background_default"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Niveau"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_nb_limit"
+        app:layout_constraintEnd_toEndOf="@+id/et_theme"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/et_theme"
+        app:layout_constraintTop_toBottomOf="@+id/et_theme" />
+
+    <EditText
+        android:id="@+id/et_nb_limit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background_default"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Nombre limite de participants"
+        android:inputType="number"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_date"
+        app:layout_constraintEnd_toEndOf="@+id/et_niveau"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/et_niveau"
+        app:layout_constraintTop_toBottomOf="@+id/et_niveau" />
+
+    <EditText
+        android:id="@+id/et_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background_default"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusable="true"
+        android:fontFamily="@font/poppins"
+        android:hint="Date du cours"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_heure_debut"
+        app:layout_constraintEnd_toEndOf="@+id/et_nb_limit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/et_nb_limit"
+        app:layout_constraintTop_toBottomOf="@+id/et_nb_limit" />
+
+    <EditText
+        android:id="@+id/et_heure_debut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background_default"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:focusable="true"
+        android:fontFamily="@font/poppins"
+        android:hint="Heure de début"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_heure_fin"
+        app:layout_constraintEnd_toEndOf="@+id/et_date"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/et_date"
+        app:layout_constraintTop_toBottomOf="@+id/et_date" />
+
+    <EditText
+        android:id="@+id/et_heure_fin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background_default"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:focusable="true"
+        android:fontFamily="@font/poppins"
+        android:hint="Heure de fin"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_create"
+        app:layout_constraintEnd_toEndOf="@+id/et_heure_debut"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/et_heure_debut"
+        app:layout_constraintTop_toBottomOf="@+id/et_heure_debut" />
+
+    <TextView
+        android:id="@+id/tv_add_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="Ajouter un cours"
+        android:textColor="@color/primaryMediumBlue"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edit_text_background_white_blue"
+        android:fontFamily="@font/poppins_extrabold"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="10dp"
+        android:text="Valider"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

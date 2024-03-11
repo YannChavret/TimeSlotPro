@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_item_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:background="@drawable/edit_text_background_yellow">
+
+    <TextView
+        android:id="@+id/tv_item_niveau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/textview_background_yellow"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="Niveau"
+        android:textColor="@color/white"
+        app:layout_constraintCircleRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/textview_background_stroke_yellow"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:text="Crédits"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item_niveau" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_item_avatar_user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_item_prenom_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Prénom user"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_item_avatar_user"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_avatar_user"
+        app:layout_constraintTop_toTopOf="@+id/iv_item_avatar_user" />
+
+    <TextView
+        android:id="@+id/tv_item_nom_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Nom user"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_item_prenom_user"
+        app:layout_constraintStart_toEndOf="@+id/tv_item_prenom_user"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_prenom_user" />
+</androidx.constraintlayout.widget.ConstraintLayout>

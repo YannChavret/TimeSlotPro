@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_item_course"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:background="@drawable/edit_text_background_pink">
+
+    <TextView
+        android:id="@+id/tv_item_theme"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:textColor="@color/pink"
+        android:text="Theme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_nb_participants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Nombre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_item_avatar_coach" />
+
+    <TextView
+        android:id="@+id/tv_item_niveau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/textview_background_pink"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="Niveau"
+        android:textColor="@color/white"
+        app:layout_constraintCircleRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Date"
+        app:layout_constraintBottom_toTopOf="@+id/tv_item_heure_fin"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item_niveau" />
+
+    <TextView
+        android:id="@+id/tv_item_heure_fin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Heure Fin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item_date" />
+
+    <TextView
+        android:id="@+id/tv_item_heure_debut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Heure Début"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_item_heure_fin"
+        app:layout_constraintEnd_toStartOf="@+id/tv_item_heure_fin"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_heure_fin" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_item_avatar_coach"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_item_nb_participants"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_theme"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_theme"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_item_prenom_coach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Prénom coach"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_item_avatar_coach"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_avatar_coach"
+        app:layout_constraintTop_toTopOf="@+id/iv_item_avatar_coach" />
+
+    <TextView
+        android:id="@+id/tv_item_nom_coach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Nom coach"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_item_prenom_coach"
+        app:layout_constraintStart_toEndOf="@+id/tv_item_prenom_coach"
+        app:layout_constraintTop_toTopOf="@+id/tv_item_prenom_coach" />
+</androidx.constraintlayout.widget.ConstraintLayout>
