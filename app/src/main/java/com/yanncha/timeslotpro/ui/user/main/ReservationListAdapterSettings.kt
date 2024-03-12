@@ -14,6 +14,7 @@ import com.yanncha.timeslotpro.databinding.ItemCourseWithCoachBinding
 import com.yanncha.timeslotpro.network.models.CourseWithCoachDetails
 import com.yanncha.timeslotpro.network.models.ReservationWithCourseDetails
 import com.yanncha.timeslotpro.ui.user.book.BookCourseViewModel
+import com.yanncha.timeslotpro.util.Level
 import com.yanncha.timeslotpro.util.picasso
 
 class ReservationsViewHolder(val itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -50,8 +51,8 @@ class ReservationListAdapter(private val viewModel: MainUserViewModel)
                     ContextCompat.getColor(
                         holder.context,
                         when (reservation.niveau) {
-                            "Débutant" -> R.color.pink
-                            "Confirmé" -> R.color.primaryBlue
+                            Level.DEBUTANT -> R.color.pink
+                            Level.CONFIRME -> R.color.primaryBlue
                             else -> R.color.yellow
                         }
                     )
@@ -59,16 +60,16 @@ class ReservationListAdapter(private val viewModel: MainUserViewModel)
 
                 tvItemNiveau.setBackgroundResource(
                     when (reservation.niveau) {
-                        "Débutant" -> R.drawable.textview_background_pink
-                        "Confirmé" -> R.drawable.textview_background_blue
+                        Level.DEBUTANT -> R.drawable.textview_background_pink
+                        Level.CONFIRME -> R.drawable.textview_background_blue
                         else -> R.drawable.textview_background_yellow
                     }
                 )
 
                 clItemCourse.setBackgroundResource(
                     when (reservation.niveau) {
-                        "Débutant" -> R.drawable.edit_text_background_pink
-                        "Confirmé" -> R.drawable.edit_text_background_blue
+                        Level.DEBUTANT -> R.drawable.edit_text_background_pink
+                        Level.CONFIRME -> R.drawable.edit_text_background_blue
                         else -> R.drawable.edit_text_background_yellow
                     }
                 )

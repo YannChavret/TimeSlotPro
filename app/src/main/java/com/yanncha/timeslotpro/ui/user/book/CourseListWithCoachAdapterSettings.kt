@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.yanncha.timeslotpro.R
 import com.yanncha.timeslotpro.databinding.ItemCourseWithCoachBinding
 import com.yanncha.timeslotpro.network.models.CourseWithCoachDetails
+import com.yanncha.timeslotpro.util.Level
 import com.yanncha.timeslotpro.util.picasso
 
 
@@ -49,8 +50,8 @@ class CourseListWithCoachAdapter(private val viewModel: BookCourseViewModel)
                     ContextCompat.getColor(
                         holder.context,
                         when (course.niveau) {
-                            "Débutant" -> R.color.pink
-                            "Confirmé" -> R.color.primaryBlue
+                            Level.DEBUTANT -> R.color.pink
+                            Level.CONFIRME -> R.color.primaryBlue
                             else -> R.color.yellow
                         }
                     )
@@ -58,16 +59,16 @@ class CourseListWithCoachAdapter(private val viewModel: BookCourseViewModel)
 
                 tvItemNiveau.setBackgroundResource(
                     when (course.niveau) {
-                        "Débutant" -> R.drawable.textview_background_pink
-                        "Confirmé" -> R.drawable.textview_background_blue
+                        Level.DEBUTANT -> R.drawable.textview_background_pink
+                        Level.CONFIRME -> R.drawable.textview_background_blue
                         else -> R.drawable.textview_background_yellow
                     }
                 )
 
                 clItemCourse.setBackgroundResource(
                     when (course.niveau) {
-                        "Débutant" -> R.drawable.edit_text_background_pink
-                        "Confirmé" -> R.drawable.edit_text_background_blue
+                        Level.DEBUTANT -> R.drawable.edit_text_background_pink
+                        Level.CONFIRME -> R.drawable.edit_text_background_blue
                         else -> R.drawable.edit_text_background_yellow
                     }
                 )

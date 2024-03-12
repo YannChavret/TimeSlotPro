@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.yanncha.timeslotpro.R
 import com.yanncha.timeslotpro.databinding.ItemCourseBinding
 import com.yanncha.timeslotpro.network.models.CourseWithCoachDetails
+import com.yanncha.timeslotpro.util.Level
+
 
 class CoursesViewHolder(val itemView: View) : RecyclerView.ViewHolder(itemView) {
     val binding = ItemCourseBinding.bind(itemView)
@@ -44,8 +46,8 @@ class CoursesListAdapter(private val viewModel: MainCoachViewModel)
                     ContextCompat.getColor(
                         holder.context,
                         when (course.niveau) {
-                            "Débutant" -> R.color.primaryBlue
-                            "Confirmé" -> R.color.pink
+                            Level.DEBUTANT -> R.color.primaryBlue
+                            Level.CONFIRME -> R.color.pink
                             else -> R.color.yellow
                         }
                     )
@@ -53,16 +55,16 @@ class CoursesListAdapter(private val viewModel: MainCoachViewModel)
 
                 tvItemNiveau.setBackgroundResource(
                     when (course.niveau) {
-                        "Débutant" -> R.drawable.textview_background_blue
-                        "Confirmé" -> R.drawable.textview_background_pink
+                        Level.DEBUTANT -> R.drawable.textview_background_blue
+                        Level.CONFIRME -> R.drawable.textview_background_pink
                         else -> R.drawable.textview_background_yellow
                     }
                 )
 
                 clItemCourse.setBackgroundResource(
                     when (course.niveau) {
-                        "Débutant" -> R.drawable.edit_text_background_blue
-                        "Confirmé" -> R.drawable.edit_text_background_pink
+                        Level.DEBUTANT -> R.drawable.edit_text_background_blue
+                        Level.CONFIRME -> R.drawable.edit_text_background_pink
                         else -> R.drawable.edit_text_background_yellow
                     }
                 )
