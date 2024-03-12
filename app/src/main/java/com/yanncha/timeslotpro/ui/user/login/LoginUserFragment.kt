@@ -1,6 +1,5 @@
 package com.yanncha.timeslotpro.ui.user.login
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,10 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.yanncha.timeslotpro.R
-import com.yanncha.timeslotpro.databinding.FragmentLoginCoachBinding
 import com.yanncha.timeslotpro.databinding.FragmentLoginUserBinding
-import com.yanncha.timeslotpro.ui.coach.login.LoginCoachFragmentDirections
-import com.yanncha.timeslotpro.ui.coach.login.LoginCoachViewModel
 import com.yanncha.timeslotpro.util.setFocusChangePink
 import com.yanncha.timeslotpro.util.setFocusChangeYellow
 import dagger.hilt.android.AndroidEntryPoint

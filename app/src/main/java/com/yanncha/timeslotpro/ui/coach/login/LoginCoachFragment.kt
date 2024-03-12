@@ -1,6 +1,5 @@
 package com.yanncha.timeslotpro.ui.coach.login
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater

@@ -12,7 +12,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yanncha.timeslotpro.databinding.FragmentMainCoachBinding
-import com.yanncha.timeslotpro.ui.user.main.MainUserFragmentDirections
 import com.yanncha.timeslotpro.util.ReservationFilter
 import dagger.hilt.android.AndroidEntryPoint
 

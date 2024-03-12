@@ -11,7 +11,6 @@ import com.yanncha.timeslotpro.network.dao.ReservationDao
 import com.yanncha.timeslotpro.network.dao.UserDao
 import com.yanncha.timeslotpro.network.models.Coach
 import com.yanncha.timeslotpro.network.models.Cours
-import com.yanncha.timeslotpro.network.models.CourseWithCoachDetails
 import com.yanncha.timeslotpro.network.models.Reservation
 import com.yanncha.timeslotpro.network.models.User
 import com.yanncha.timeslotpro.util.Converters

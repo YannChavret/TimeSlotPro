@@ -1,6 +1,5 @@
 package com.yanncha.timeslotpro.ui.coach.detail
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,13 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.yanncha.timeslotpro.R
-import com.yanncha.timeslotpro.databinding.FragmentBookDetailsCourseBinding
 import com.yanncha.timeslotpro.databinding.FragmentDetailsCourseBinding
-import com.yanncha.timeslotpro.ui.user.book_details.BookDetailsCourseFragmentArgs
-import com.yanncha.timeslotpro.ui.user.book_details.BookDetailsCourseViewModel
-import com.yanncha.timeslotpro.ui.user.book_details.UserListAdapter
-import com.yanncha.timeslotpro.util.picasso
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -39,7 +39,6 @@ class CreateCourseFragment : Fragment() {
 
         with(binding) {
             etTheme.setFocusChangeBlue()
-            //etNiveau.setFocusChangeYellow()
             etNbLimit.setFocusChangePink()
             etDate.setFocusChangeBlue()
             etHeureDebut.setFocusChangeYellow()

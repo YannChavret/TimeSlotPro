@@ -1,6 +1,5 @@
 package com.yanncha.timeslotpro.ui.user.profile
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.yanncha.timeslotpro.R
-import com.yanncha.timeslotpro.databinding.FragmentBookDetailsCourseBinding
 import com.yanncha.timeslotpro.databinding.FragmentProfileBinding
-import com.yanncha.timeslotpro.ui.user.book_details.BookDetailsCourseViewModel
 import com.yanncha.timeslotpro.util.picasso
 import dagger.hilt.android.AndroidEntryPoint
 

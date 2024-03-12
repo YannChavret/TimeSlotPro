@@ -9,15 +9,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yanncha.timeslotpro.databinding.FragmentMainUserBinding
-import com.yanncha.timeslotpro.ui.user.UserFragmentDirections
 import com.yanncha.timeslotpro.util.ReservationFilter
-//import com.yanncha.timeslotpro.ui.user.book.BookCourseFragmentDirections
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainUserFragment : Fragment() {

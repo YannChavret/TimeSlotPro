@@ -5,7 +5,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.yanncha.timeslotpro.network.models.Coach
 import com.yanncha.timeslotpro.network.models.User
 
 
