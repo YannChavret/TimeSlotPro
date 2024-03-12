@@ -5,6 +5,14 @@ plugins {
     id("kotlin-parcelize")
     id ("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs.kotlin")
+    id("org.sonarqube") version "4.4.1.3373"
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "live-simplon")
+        property("sonar.projectName", "live-simplon")
+    }
 }
 
 android {
@@ -43,6 +51,8 @@ android {
         dataBinding = true
     }
 }
+
+
 
 dependencies {
 
